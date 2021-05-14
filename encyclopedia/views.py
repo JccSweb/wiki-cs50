@@ -14,7 +14,7 @@ class AddEntry(forms.Form):
 
     def __init__(self,*args,**kwargs):
         super(AddEntry, self).__init__(*args, **kwargs)
-        if self.fields["content"]:
+        if self.initial:
             self.fields["title"].widget.attrs['readonly'] = True
 
 def newPage(request):
